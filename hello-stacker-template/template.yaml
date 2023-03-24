@@ -1,0 +1,9 @@
+name: hello-stacker-template
+description: template para estudo do stackspot
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
