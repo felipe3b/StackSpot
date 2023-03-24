@@ -63,3 +63,5 @@ stk apply plugin -p <TEXTO-COM-O-CAMINHO-DA-PASTA-DO-PLUGIN>
 
 <img src="testando-plugin-1.png" alt="testando-plugin-stack-1">
 <img src="testando-plugin-2.png" alt="testando-plugin-stack-2">
+
+> Nas imagens acima SUCESSO❕❕❕ 😎. Ao menos se for carioca 😂😂😂.
