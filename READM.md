@@ -11,7 +11,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
 ```
 stk create stack <nome-da-stack-que-será-criada>
 ```
-<img src="criando-stack-1.png" alt="criando-stack">
+<img src="./criando-stack-1.png" alt="criando-stack">
 
 > Na imagem acima temos um exemplo de criação de uma Stack, onde podemos começar a criar templates e pluguins dentro dela :clap:.
 
