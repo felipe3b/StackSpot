@@ -1,6 +1,9 @@
 # StackSpot
 
-- [emojis github :metal: :metal: :metal: ](https://github.com/hideraldus13/github-emoji)
+A StackSpot é uma plataforma que oferece um conjunto de ferramentas, cujo objetivo é permitir que desenvolvedores e grandes empresas acelerem a sua produção de software. Além disso, também disponibiliza instrumentos para você publicar em uma Cloud de forma menos complicada.
+
+- [O que é a StackSpot?, Para quem a StackSpot foi criada?, Para quem a StackSpot foi criada? .](https://docs.stackspot.com/docs/getting-started/how-it-works/)
+
 
 Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/conteudo separado por funções, o "Template" que sera a base, e depois os "Pluguins" que serão nossas funcionalidades que podem ser adicionadoss ao template dando a ele mais poderes :muscle: :muscle: :muscle:.
 
@@ -65,3 +68,5 @@ stk apply plugin -p <TEXTO-COM-O-CAMINHO-DA-PASTA-DO-PLUGIN>
 <img src="testando-plugin-2.png" alt="testando-plugin-stack-2">
 
 > Nas imagens acima SUCESSO❕❕❕ 😎. Ao menos se for carioca 😂😂😂.
+
+- [emojis github :metal: :metal: :metal: ](https://github.com/hideraldus13/github-emoji)
