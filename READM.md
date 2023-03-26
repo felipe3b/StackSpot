@@ -18,7 +18,8 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   
   > Na imagem acima temos um exemplo de criação de uma Stack, onde podemos começar a criar templates e pluguins dentro dela :clap:.
   
-  <img src="estrutura-stack-1.png" alt="estrtutura-stack">
+  
+  ![estrtutura-stack](images/estrutura-stack-1.png)
   
   > A imagem acima mostra como ficou a estrutura da Stack :clap:.
 
@@ -28,11 +29,12 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   stk create template <TEXTO-COM-O-NOME-DO-TEMPLATE>
   ```
   
-  <img src="criando-template-1.png" alt="template-stack">
+  ![template-stack](images/criando-template-1.png)
+  
   
   > Na imagem acima temos um exemplo de criação de uma Template :clap:.
   
-  <img src="estrutura-template-1.png" alt="estrtutura-template">
+  ![estrtutura-template](images/estrutura-template-1.png)
   
   > A imagem acima mostra como ficou a estrutura da Stack :clap:.
 
@@ -42,7 +44,8 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   stk create app <TEXTO-COM-O-NOME-DO-APP> -p <TEXTO-COM-O-CAMINHO-DA-PASTA-DO-TEMPLATE>
   ```
   
-  <img src="testando-template-1.png" alt="teste-template-stack">
+  ![teste-template-stack](images/testando-template-1.png)
+  
   
   > Na imagem acima temos um exemplo de criação de uma Template :clap:.
 
@@ -52,7 +55,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   stk create plugin <TEXTO-COM-O-NOME-DO-PLUGIN>
   ```
   
-  <img src="criando-pluguin-1.png" alt="pluguin-stack">
+  ![pluguin-stack](images/criando-pluguin-1.png)
   
   > Na imagem acima temos um exemplo de criação de uma Pluguin :clap:.
 
@@ -62,12 +65,13 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   stk apply plugin -p <TEXTO-COM-O-CAMINHO-DA-PASTA-DO-PLUGIN>
   ```
   
-  <img src="aplicando-plugin-1.png" alt="aplicando-plugin-stack">
+  ![aplicando-plugin-stack](images/aplicando-plugin-1.png)
 
 6. Testando Template com Plugin
 
-  <img src="testando-plugin-1.png" alt="testando-plugin-stack-1">
-  <img src="testando-plugin-2.png" alt="testando-plugin-stack-2">
+
+  ![testando-plugin-stack-1](images/testando-plugin-1.png)
+  ![testando-plugin-stack-2](images/testando-plugin-2.png)
   
   > Nas imagens acima SUCESSO❕❕❕ 😎. Ao menos se for carioca 😂😂😂.
 
