@@ -8,7 +8,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
 
 - [Clique aqui para verificar a documentação.](https://docs.stackspot.com/docs/create-stacks/quickstart/)
 
-1. Criar Stack
+## 1. Criar Stack
 
   ```bash
   stk create stack <nome-da-stack-que-será-criada>
@@ -23,7 +23,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   
   > A imagem acima mostra como ficou a estrutura da Stack :clap:.
 
-2. Criar Template
+## 2. Criar Template
 
   ```bash
   stk create template <TEXTO-COM-O-NOME-DO-TEMPLATE>
@@ -38,7 +38,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   
   > A imagem acima mostra como ficou a estrutura da Stack :clap:.
 
-3. Testando Template
+## 3. Testando Template
 
   ```bash
   stk create app <TEXTO-COM-O-NOME-DO-APP> -p <TEXTO-COM-O-CAMINHO-DA-PASTA-DO-TEMPLATE>
@@ -49,7 +49,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   
   > Na imagem acima temos um exemplo de criação de uma Template :clap:.
 
-4. Criar pluguins
+## 4. Criar pluguins
 
   ```bash
   stk create plugin <TEXTO-COM-O-NOME-DO-PLUGIN>
@@ -59,7 +59,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   
   > Na imagem acima temos um exemplo de criação de uma Pluguin :clap:.
 
-5. Aplicando Plugin no Template
+## 5. Aplicando Plugin no Template
 
   ```bash
   stk apply plugin -p <TEXTO-COM-O-CAMINHO-DA-PASTA-DO-PLUGIN>
@@ -67,7 +67,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   
   ![aplicando-plugin-stack](images/aplicando-plugin-1.png)
 
-6. Testando Template com Plugin
+## 6. Testando Template com Plugin
 
 
   ![testando-plugin-stack-1](images/testando-plugin-1.png)
