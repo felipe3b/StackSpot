@@ -7,10 +7,15 @@ inputs:
     type: text
     name: project_name
     default: project-name
+
+  - label: Nome do projeto
+    type: text
+    name: nome_projeto
+    default: demo  
   
   - label: Spring boot Verion
     name: spring_boot_version
-    type: multiselect
+    type: text
     required: true
     items:
       - 3.0.5
@@ -20,33 +25,25 @@ inputs:
 
   - label: Group Id
     name: group_id
-    type: string
+    type: text
     required: true
     default: com.example
 
   - label: Artifact Id
     name: artifact_id
-    type: string
+    type: text
     required: true
     default: demo
 
   - label: Description
     name: description
-    type: string
+    type: text
     required: true
     default: Demo project for Spring Boot
 
-  - label: Packaging
-    name: packaging
-    type: string
-    required: true
-    items: 
-      - jar
-      - war
-
   - label: Java Version
     name: java_version
-    type: multiselect
+    type: text
     items:
       - 17
       - 11
@@ -54,6 +51,5 @@ inputs:
       - 20
 
 computed-inputs:
-   package_name: "{{ inputs.group_id }}.{{ inputs.artifact_id }}"
-   pasta: "{{ computed_inputs.package_name | replace('.', '/') }}"
-
+   "package_name": "{{inputs.group_id }}.{{inputs.artifact_id}}"
+   "pasta": "{{computed_inputs.package_name | replace('.', '\\')}}"

@@ -141,6 +141,14 @@ inputs:
 
 ```yaml
 
+## 2. Testando Template
 
+Com o template criado, vamos testar se ele esta funcionando.
 
-[Voltar ao início](#stackspot)
+  ```bash
+  stk create app java-spring-boot-app -p java-spring-boot-template
+  ```
+
+![testando-template-java-spring-boot](images/testando-template-java-spring-1.png)
+
+[Voltar ao inicio!!](#stackspot)
