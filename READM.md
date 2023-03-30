@@ -149,6 +149,10 @@ Com o template criado, vamos testar se ele esta funcionando.
   stk create app java-spring-boot-app -p java-spring-boot-template
   ```
 
-![testando-template-java-spring-boot](images/testando-template-java-spring-1.png)
+![testando-template-java-spring-boot1](images/testando-template-java-spring-1.png)
+
+![testando-template-java-spring-boot-2](images/testando-template-java-spring-2.png)
+
+
 
 [Voltar ao inicio!!](#stackspot)

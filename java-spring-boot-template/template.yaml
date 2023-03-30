@@ -44,6 +44,7 @@ inputs:
   - label: Java Version
     name: java_version
     type: text
+    required: true
     items:
       - 17
       - 11
@@ -52,4 +53,4 @@ inputs:
 
 computed-inputs:
    "package_name": "{{inputs.group_id }}.{{inputs.artifact_id}}"
-   "pasta": "{{computed_inputs.package_name | replace('.', '\\')}}"
+   "pasta": "{{computed_inputs.package_name | replace('.', '/')}}"
