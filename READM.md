@@ -14,7 +14,7 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   stk create stack <nome-da-stack-que-será-criada>
   ```
   
-  ![alt criando-stack](../images/criando-stack-1.png)
+  ![alt criando-stack](./images/criando-stack-1.png)
   
   > Na imagem acima temos um exemplo de criação de uma Stack, onde podemos começar a criar templates e pluguins dentro dela :clap:.
   
@@ -76,5 +76,71 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   > Nas imagens acima SUCESSO❕❕❕ 😎. Ao menos se for carioca 😂😂😂.
 
 - [emojis github :metal: :metal: :metal:](https://github.com/hideraldus13/github-emoji)
+
+
+
+# Craindo template com Java + Spring Boot
+
+## 1. Criando Template
+
+Vamos definir os [inputs do template](https://docs.stackspot.com/docs/create-stacks/yaml-files/inputs/);
+
+- **spring_boot_version**: 2.3.1.RELEASE
+- **group_id**: com.stackspot
+- **artifact_id**: stackspot
+- **description**: StackSpot
+- **package_name**: com.stackspot.stackspot
+- **packaging**: jar
+- **java_version**: 11
+
+
+ Comando para criar template
+
+  ```bash
+  stk create template java-spring-boot-template
+  ``` 
+
+![criando-template-java-spring-boot](images/criando-template-java-spring-boot-1.png)
+
+Vamos utilizar o [spring initializer](https://start.spring.io/) para gerar uma projeto que vamos utilizar como base para o nosso template.
+
+![spring-initializer](images/spring-initializer-1.png)
+
+Após gerar o projeto, vamos copiar o conteudo da pasta gerada para a pasta do template.
+
+![copiando-conteudo-template](images/copiando-conteudo-template-1.png)
+
+Agora vamos configurar o arquivo [template.yaml](https://docs.stackspot.com/docs/create-stacks/yaml-files/template/), que é o arquivo que vai definir o que o template vai fazer.
+
+```yaml
+name: java-spring-boot-template
+description: Template para criação de projetos Java + Spring Boot
+inputs:
+  - name: spring_boot_version
+    type: string
+    default: 2.3.1.RELEASE
+  - name: group_id
+    type: string
+    default: com.stackspot
+  - name: artifact_id
+    type: string
+    default: stackspot
+  - name: description
+    type: string
+    default: StackSpot
+  - name: package_name
+    type: string
+    default: com.stackspot.stackspot
+  - name: packaging
+    type: string
+    default: jar
+  - name: java_version
+    type: string
+    default: 11
+```
+
+```yaml
+
+
 
 [Voltar ao início](#stackspot)

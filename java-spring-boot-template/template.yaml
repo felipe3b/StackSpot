@@ -1,0 +1,59 @@
+name: java-spring-boot-template
+description: template para estudo do StackSpot
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
+  
+  - label: Spring boot Verion
+    name: spring_boot_version
+    type: multiselect
+    required: true
+    items:
+      - 3.0.5
+      - 3.1.0
+      - 2.7.11
+      - 2.7.10
+
+  - label: Group Id
+    name: group_id
+    type: string
+    required: true
+    default: com.example
+
+  - label: Artifact Id
+    name: artifact_id
+    type: string
+    required: true
+    default: demo
+
+  - label: Description
+    name: description
+    type: string
+    required: true
+    default: Demo project for Spring Boot
+
+  - label: Packaging
+    name: packaging
+    type: string
+    required: true
+    items: 
+      - jar
+      - war
+
+  - label: Java Version
+    name: java_version
+    type: multiselect
+    items:
+      - 17
+      - 11
+      - 8
+      - 20
+
+computed-inputs:
+   package_name: "{{ inputs.group_id }}.{{ inputs.artifact_id }}"
+   pasta: "{{ computed_inputs.package_name | replace('.', '/') }}"
+
