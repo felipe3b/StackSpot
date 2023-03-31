@@ -75,84 +75,83 @@ Para inicar precisamos estruturar um projeto, nele vamos definir nosso codigo/co
   
   > Nas imagens acima SUCESSO❕❕❕ 😎. Ao menos se for carioca 😂😂😂.
 
-- [emojis github :metal: :metal: :metal:](https://github.com/hideraldus13/github-emoji)
-
-
-
 # Craindo template com Java + Spring Boot
 
 ## 1. Criando Template
 
-Vamos definir os [inputs do template](https://docs.stackspot.com/docs/create-stacks/yaml-files/inputs/);
+Vamos definir os [parametros de entrada do template](https://docs.stackspot.com/docs/create-stacks/yaml-files/inputs/)
 
-- **spring_boot_version**: 2.3.1.RELEASE
-- **group_id**: com.stackspot
-- **artifact_id**: stackspot
-- **description**: StackSpot
-- **package_name**: com.stackspot.stackspot
-- **packaging**: jar
-- **java_version**: 11
+- **Nome do projeto**
+- **Versão do Spring Boot**
+- **ID do Grupo**
+- **ID do Artefato**
+- **Descrição do Projeto**
+- **Versão do Java**
 
 
- Comando para criar template
+ Com os parametros definidos vamos criar nosso [Template](https://docs.stackspot.com/docs/stk-cli/commands/commands-list/templates/stk-create-template/)
 
   ```bash
-  stk create template java-spring-boot-template
+  stk create template <TEXTO-COM-O-NOME-DO-TEMPLATE>
   ``` 
 
 ![criando-template-java-spring-boot](images/criando-template-java-spring-boot-1.png)
 
-Vamos utilizar o [spring initializer](https://start.spring.io/) para gerar uma projeto que vamos utilizar como base para o nosso template.
+Vamos utilizar o [spring initializer](https://start.spring.io/) para gerar a estrutura que vamos utilizar como base para o nosso template.
 
 ![spring-initializer](images/spring-initializer-1.png)
 
-Após gerar o projeto, vamos copiar o conteudo da pasta gerada para a pasta do template.
+Após escolher as opções deseja clique em **GENERATE**, ira iniciar o download de um arquivo ZIP, depois extraia o conteudo para a pasta do template.
+
+![spring-initializer](images/spring-initializer-2.png)
 
 ![copiando-conteudo-template](images/copiando-conteudo-template-1.png)
 
-Agora vamos configurar o arquivo [template.yaml](https://docs.stackspot.com/docs/create-stacks/yaml-files/template/), que é o arquivo que vai definir o que o template vai fazer.
+Agora vamos editar o arquivo [template.yaml](https://docs.stackspot.com/docs/create-stacks/yaml-files/template/), é nele que configuramos os parâmetros de entrada do Template que definimos anteriormente.
 
-```yaml
-name: java-spring-boot-template
-description: Template para criação de projetos Java + Spring Boot
-inputs:
-  - name: spring_boot_version
-    type: string
-    default: 2.3.1.RELEASE
-  - name: group_id
-    type: string
-    default: com.stackspot
-  - name: artifact_id
-    type: string
-    default: stackspot
-  - name: description
-    type: string
-    default: StackSpot
-  - name: package_name
-    type: string
-    default: com.stackspot.stackspot
-  - name: packaging
-    type: string
-    default: jar
-  - name: java_version
-    type: string
-    default: 11
-```
+![configurando-template-yaml](images/template-yml-1.png)
 
-```yaml
+Agora vamos substituir os valores da estrutura que criamos pelos parametros que definimos no template.yml para que sejam materializados na hora da criação do projeto.
+
+No pom.xml vamos inserir os parametros;
+
+- spring_boot_version
+- group_id
+- artifact_id
+- nome_projeto
+- descricao_projeto
+- java_version
+
+![substituindo-parametros-pom-xml](images/pom-1.png)
+
+Para criar a estrutura de pastas do projeto vamos utilizar o **[computed-inputs](https://docs.stackspot.com/docs/create-stacks/yaml-files/advanced-inputs/)** , nele podemos manipular os parametros de entrada para criar novos.
+
+Primeiro vamos criar um novo parametro chamado ***package_name*** que vai receber o valor do ***group_id*** mais o ***artifact_id***.
+
+Depois criar o parametro ***pasta*** que vai receber o valor do ***package_name*** com os pontos substituidos por barras, conforme podemos ver no arquivo template.yml
+
+![computed-inputs](images/computed-inputs-1.png)
+
+Agora na estrutura de pastas vamos nomear com o nome do parametro ***pasta*** conforme mostrado na imagem abaixo.
+
+![estrutura-pastas](images/estrutura-pastas-1.png)
+![estrutura-pastas](images/estrutura-pastas-2.png)
 
 ## 2. Testando Template
 
-Com o template criado, vamos testar se ele esta funcionando.
+Com o template criado, vamos testar se está tudo funcionando.
 
   ```bash
-  stk create app java-spring-boot-app -p java-spring-boot-template
+  stk create app <TEXTO-COM-O-NOME-DO-APP> -p <PATH-DO-TEMPLATE>
   ```
 
 ![testando-template-java-spring-boot1](images/testando-template-java-spring-1.png)
 
+![testando-template-java-spring-boot-3](images/testando-template-java-spring-3.png)
+
 ![testando-template-java-spring-boot-2](images/testando-template-java-spring-2.png)
 
 
+- [emojis github :metal: :metal: :metal:](https://github.com/hideraldus13/github-emoji)
 
 [Voltar ao inicio!!](#stackspot)

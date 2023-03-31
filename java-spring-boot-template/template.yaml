@@ -13,7 +13,7 @@ inputs:
     name: nome_projeto
     default: demo  
   
-  - label: Spring boot Verion
+  - label: Versão do Spring Boot
     name: spring_boot_version
     type: text
     required: true
@@ -23,25 +23,25 @@ inputs:
       - 2.7.11
       - 2.7.10
 
-  - label: Group Id
+  - label: ID do Grupo
     name: group_id
     type: text
     required: true
     default: com.example
 
-  - label: Artifact Id
+  - label: ID do Artefato
     name: artifact_id
     type: text
     required: true
     default: demo
 
-  - label: Description
+  - label: Descrição do Projeto
     name: description
     type: text
     required: true
     default: Demo project for Spring Boot
 
-  - label: Java Version
+  - label: Versão do Java
     name: java_version
     type: text
     required: true
