@@ -155,3 +155,5 @@ Com o template criado, vamos testar se está tudo funcionando.
 - [emojis github :metal: :metal: :metal:](https://github.com/hideraldus13/github-emoji)
 
 [Voltar ao inicio!!](#stackspot)
+
+# Criando plugin
