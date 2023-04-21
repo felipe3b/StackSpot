@@ -1,0 +1,47 @@
+name: rest-api-spring-boot-plugin
+description: Plugin para criar Rest Api com Spring Boot
+display-name: rest-api-spring-boot-plugin
+picture: plugin.png
+category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+compatibility:
+  - java
+  - spring
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
+  - "Api"
+types:
+  - app
+
+inputs:
+  - label: ID do Grupo
+    name: group_id
+    type: text
+    required: true
+    default: com.example
+
+  - label: ID do Artefato
+    name: artifact_id
+    type: text
+    required: true
+    default: demo
+
+hooks:
+  - type: edit
+    path: pom.xml
+    working-dir: "{{project_name}}"
+    trigger: after-render
+    changes:
+      - search:
+          string: "</dependencies>"
+          insert-before:
+            snippet: snippets/spring-rest-api.xml
+          when:
+            not-exists-snippet: snippets/spring-rest-api.xml
+
+computed-inputs:
+   "package_name": "{{inputs.group_id}}.{{inputs.artifact_id}}"
+   "pasta": "{{computed_inputs.package_name | replace('.', '/')}}"
+          

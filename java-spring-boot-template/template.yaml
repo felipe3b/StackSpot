@@ -1,5 +1,5 @@
 name: java-spring-boot-template
-description: template para estudo do StackSpot
+description: Template para criação de projetos Spring Boot
 types:
   - app-template
 inputs:
@@ -52,5 +52,5 @@ inputs:
       - 20
 
 computed-inputs:
-   "package_name": "{{inputs.group_id }}.{{inputs.artifact_id}}"
+   "package_name": "{{inputs.group_id}}.{{inputs.artifact_id}}"
    "pasta": "{{computed_inputs.package_name | replace('.', '/')}}"
