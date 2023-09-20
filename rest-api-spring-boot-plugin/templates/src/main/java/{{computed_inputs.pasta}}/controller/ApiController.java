@@ -8,5 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// create an endpoint that returns hello world using spring boot that is configured in this context
 @RestController
 @RequestMapping("/api")
+
